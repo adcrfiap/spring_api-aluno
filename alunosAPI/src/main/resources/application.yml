@@ -1,0 +1,13 @@
+server:
+  port : 8888
+  error:
+    include-message: always
+
+
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: alunos
+      auto-index-creation: true
