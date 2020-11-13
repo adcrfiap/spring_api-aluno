@@ -7,14 +7,14 @@ import lombok.Data;
 public class AlunoDTO {
 
     private  String nome;
-    private  Integer rm;
-    private  Integer numeroCartao;
+    private  String rm;
+    private  String num_cartao;
 
     public AlunoDTO(){};
 
     public AlunoDTO(Aluno aluno) {
         this.nome           = aluno.getNome();
-        this.numeroCartao   = aluno.getNumeroCartao();
+        this.num_cartao     = aluno.getNumeroCartao();
         this.rm             = aluno.getRm();
     }
 }

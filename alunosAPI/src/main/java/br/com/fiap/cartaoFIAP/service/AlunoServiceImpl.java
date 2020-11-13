@@ -19,7 +19,7 @@ public class AlunoServiceImpl implements AlunoService{
 
 
     @Override
-    public AlunoDTO findByNumeroCartao(Integer numeroCartao) {
+    public AlunoDTO findByNumeroCartao(String numeroCartao) {
 
         return new AlunoDTO(
                 alunoRepository.findByNumeroCartao(numeroCartao)
@@ -31,7 +31,7 @@ public class AlunoServiceImpl implements AlunoService{
         Aluno aluno = new Aluno();
 
         aluno.setNome(alunoDTO.getNome());
-        aluno.setNumeroCartao(alunoDTO.getNumeroCartao());
+        aluno.setNumeroCartao(alunoDTO.getNum_cartao());
         aluno.setRm(alunoDTO.getRm());
 
         Aluno savedAluno = alunoRepository.save(aluno);
@@ -48,7 +48,7 @@ public class AlunoServiceImpl implements AlunoService{
     }
 
     @Override
-    public Boolean delete(Integer numeroCartao) {
+    public Boolean delete(String numeroCartao) {
 
         Aluno aluno = alunoRepository.findByNumeroCartao(numeroCartao);
 

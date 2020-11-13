@@ -9,5 +9,5 @@ spring:
     mongodb:
       host: localhost
       port: 27017
-      database: alunos
+      database: springProject36SCJ
       auto-index-creation: true

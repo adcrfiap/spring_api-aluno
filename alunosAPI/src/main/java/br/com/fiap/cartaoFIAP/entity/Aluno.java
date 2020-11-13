@@ -9,20 +9,17 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 
 @Data
-@Document
+@Document(collection = "alunos")
 public class Aluno {
 
     @Id
     private String id;
 
-    private Integer rm;
+    private String rm;
 
     private  String nome;
 
-    @Indexed(
-            unique = true
-    )
-    private  Integer numeroCartao;
+    private  String numeroCartao;
 
     public Aluno() {
 

@@ -33,7 +33,7 @@ public class  AlunoController {
 
 
     @GetMapping("{numeroCartao}")
-    public ResponseEntity<AlunoDTO> findByNumeroCartao(@PathVariable Integer numeroCartao){
+    public ResponseEntity<AlunoDTO> findByNumeroCartao(@PathVariable String numeroCartao){
         try {
             return new ResponseEntity(alunoService.findByNumeroCartao(numeroCartao),
                     HttpStatus.OK);
@@ -57,7 +57,7 @@ public class  AlunoController {
     }
 
     @DeleteMapping("{numeroCartao}")
-    public ResponseEntity deleteByNumeroCartao(@PathVariable Integer numeroCartao){
+    public ResponseEntity deleteByNumeroCartao(@PathVariable String numeroCartao){
 
         if( alunoService.delete(numeroCartao)){
             return new ResponseEntity(new MensagemDTO("Registro removido"),

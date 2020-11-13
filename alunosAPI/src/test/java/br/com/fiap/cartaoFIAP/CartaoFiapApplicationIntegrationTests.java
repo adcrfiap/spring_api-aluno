@@ -45,7 +45,7 @@ class CartaoFiapApplicationIntegrationTests {
 
 		Aluno aluno = new Aluno();
 		aluno.setId("123456");
-		aluno.setNumeroCartao(999999);
+		aluno.setNumeroCartao("999999");
 
 		//Inserir registor de teste na base de dados
 		alunoService.delete(aluno.getNumeroCartao());

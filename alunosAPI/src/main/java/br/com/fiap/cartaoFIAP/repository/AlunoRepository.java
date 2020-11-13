@@ -7,6 +7,6 @@ import java.util.List;
 
 public interface AlunoRepository extends MongoRepository<Aluno, String> {
 
-    Aluno findByNumeroCartao(Integer numeroCartao);
+    Aluno findByNumeroCartao(String numeroCartao);
     List<Aluno> findAll();
 }

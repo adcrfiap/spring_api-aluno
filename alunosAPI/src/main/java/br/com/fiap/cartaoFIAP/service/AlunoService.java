@@ -7,10 +7,10 @@ import java.util.List;
 
 public interface AlunoService {
 
-    AlunoDTO findByNumeroCartao(Integer numeroCartao);
+    AlunoDTO findByNumeroCartao(String numeroCartao);
     AlunoDTO create(AlunoDTO alunoDTO);
     List<AlunoDTO> findAll();
-    Boolean delete( Integer numeroCartao );
+    Boolean delete( String numeroCartao );
 
 
 }
