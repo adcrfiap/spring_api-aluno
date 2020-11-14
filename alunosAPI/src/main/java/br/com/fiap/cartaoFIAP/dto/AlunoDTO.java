@@ -8,13 +8,13 @@ public class AlunoDTO {
 
     private  String nome;
     private  String rm;
-    private  String num_cartao;
+    private  String numeroCartao;
 
     public AlunoDTO(){};
 
     public AlunoDTO(Aluno aluno) {
         this.nome           = aluno.getNome();
-        this.num_cartao     = aluno.getNumeroCartao();
+        this.numeroCartao   = aluno.getNumeroCartao();
         this.rm             = aluno.getRm();
     }
 }
